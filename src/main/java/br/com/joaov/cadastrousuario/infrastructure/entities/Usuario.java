@@ -13,7 +13,7 @@ import lombok.*;
 public class Usuario {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "email",unique = true) // Quer dizer q o nome da tabela e email e esse atributo e unico
