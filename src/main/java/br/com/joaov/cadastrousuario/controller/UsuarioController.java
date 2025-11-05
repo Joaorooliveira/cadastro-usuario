@@ -23,4 +23,9 @@ public class UsuarioController {
         usuarioService.salvarUsuario(usuario);
         return ResponseEntity.ok().build();
     }
+
+    @GetMapping
+    public ResponseEntity<Usuario> buscarUsuarioPorEmail(@RequestParam String email) {
+        return ResponseEntity.ok(usuarioService.buscarUsuarioPorEmail(email));
+    }
 }
