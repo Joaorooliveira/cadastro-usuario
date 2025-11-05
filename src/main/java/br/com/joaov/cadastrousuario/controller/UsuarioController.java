@@ -35,4 +35,11 @@ public class UsuarioController {
        usuarioService.deletarUsuarioPorEmail(email);
        return ResponseEntity.ok().build();
     }
+
+    @PutMapping()
+    @Transactional
+    public ResponseEntity<Void> atualizarUsuarioPorId(@RequestParam Long id ,@RequestBody Usuario usuario) {
+        usuarioService.atualizarUsuarioPorId(id, usuario);
+        return ResponseEntity.ok().build();
+    }
 }
